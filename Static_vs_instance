@@ -1,0 +1,21 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to explain the difference between static variable and instance variable
+public class Demo {
+	 int x=10;
+	 static int y=100;
+	 
+	public static void main(String[] args) {
+		Demo d1=new Demo();
+		d1.x=99;
+		d1.y=99;
+		
+		Demo d2=new Demo();
+		
+		System.out.println(d1.x+" "+d1.y);
+		System.out.println(d2.x+" "+d2.y);
+
+		
+	}
+
+}
