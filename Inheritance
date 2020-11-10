@@ -1,0 +1,47 @@
+// OOPs Playlist link: https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to expalain the Inheritance concept
+class Floor{
+	double fl;
+	double fb;
+	double far; //floor area
+	int no_tiles; //no of tiles required for flooring
+	public void FloorAr(){
+		far=fl*fb;
+	}
+	
+}
+class Tile extends Floor{
+	double tl;
+	double tb;
+	double tar; //tiles area
+	double cost;//cost of tile of 1 unit area
+	public void TileAr(){
+		tar=tl*tb;
+	}
+	public void NoTiles(){  //fun to calculate the no of tiles req
+		no_tiles=(int)(Math.ceil(far/tar));
+	}
+}
+public class Bill {
+	public static void main(String[] args) {
+		Tile t=new Tile();
+		
+		t.fl=7.8;
+		t.fb=5.4;
+		t.tl=3.0;
+		t.tb=2.0;
+		t.cost=50;
+		
+		t.FloorAr();
+		t.TileAr();
+		t.NoTiles();
+		
+		System.out.println("Floor Ar:"+t.far);
+		System.out.println("Tile Ar:"+t.tar);
+		System.out.println("No of tiles:"+t.no_tiles);
+		System.out.println("cost"+(t.cost*t.tar*t.no_tiles));	
+			
+	}
+
+}
