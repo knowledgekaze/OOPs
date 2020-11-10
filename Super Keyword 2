@@ -1,0 +1,57 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the Super Keyword concept
+class A{
+	int i;
+	A(){
+		System.out.println("A's constructor");
+	}
+	A(int a){
+		i=a;
+		System.out.println("A's parametrized constr");
+	}
+	public void funA(){
+		System.out.println("class A method");
+	}
+}
+
+class B extends A{
+	int j;
+	B(){
+		super();
+		System.out.println("B's constructor");
+	}
+	B(int a,int b){
+		super(b);
+		j=a;
+		System.out.println("B's parametrized constr");
+	}
+	public void funB(){
+		System.out.println("class B method");
+	}
+}
+//TOP TO DOWN
+class C extends B{
+	int k;
+	C(){
+		super();
+		System.out.println("C's constructor");
+	}
+	C(int a,int b,int c){
+		super(b,c);
+		k=a;
+		System.out.println("C's parametrized constr");
+	}
+	public void funC(){
+		System.out.println("class C method");
+	}
+}
+
+public class Tester {
+	public static void main(String[] args) {	
+
+		C c=new C(10,20,30);
+		System.out.println(c.i+" "+c.j+" "+c.k);
+	}
+
+}
