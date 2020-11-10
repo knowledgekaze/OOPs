@@ -1,0 +1,19 @@
+//Program to expalain the Instance Variable
+
+public class Demo {
+	int x=10;
+	public static void main(String[] args) {
+		Demo d1=new Demo();
+		Demo d2=new Demo();
+		Demo d3=new Demo();
+		Demo d4=d1;
+		d1.x++;
+		d2.x--;
+		
+		System.out.println("d1.x :"+d1.x);
+		System.out.println("d2.x :"+d2.x);
+		System.out.println("d3.x :"+d3.x);
+		System.out.println("d4.x :"+d4.x);
+
+		
+	}
