@@ -1,0 +1,33 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understande the concept of upcasting and downcasting
+class Animal{
+	String name;
+	public void funA(){
+		System.out.println("Animal method");
+	}	
+}
+
+class Dog extends Animal{
+	String color;
+	public void funB(){
+		System.out.println("Dog method");
+	}
+}
+
+public class Test {
+	public static void main(String[] args) {
+		Animal a1=new Dog();
+		if(a1 instanceof Dog){
+		Dog d1=(Dog)a1;
+		d1.funA();
+		}
+		Animal a2=new Animal();
+		if(a2 instanceof Dog){
+			Dog d2=(Dog)a2;
+			d2.funA();
+		}	
+		
+	}
+
+}
