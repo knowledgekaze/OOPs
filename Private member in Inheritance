@@ -1,0 +1,40 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the behaviour of pvt member in inheritance
+   class Person{
+	public String name;
+	private int age;
+	Person(String name,int age){
+		this.name=name;
+		this.age=age;
+	}
+	public void set(int age){
+		this.age=age;
+	}
+	public int get(){
+		return age;
+	}
+}
+class Employee extends Person{
+	int emp_id;
+	String post;
+	Employee(String name,int age,int emp_id,String post){
+		super(name,age);
+		
+		this.emp_id=emp_id;
+		this.post=post;
+		
+	}
+	public void display(){
+		set(30);
+		System.out.println(name+" "+get()+" "+emp_id+" "+post);
+	}
+
+}
+public class Demo {
+	public static void main(String[] args){
+		Employee e1=new Employee("Dekay",22,111,"Data Analyst");
+		e1.display();
+	}
+
+}
