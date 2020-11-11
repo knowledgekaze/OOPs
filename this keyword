@@ -1,0 +1,36 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+
+//Program to understand the this keyword concept
+class Demo{
+	int x;
+	int y;
+	Demo(int x,int y){ // used to make diff b/w local and instance var
+		this.x=x;
+		this.y=y;
+		doubleValue(this);
+	}
+	public Demo getDemo(){ 
+		return this;
+	}
+	Demo(int x){ // to call the constr of the same class
+		this(x,2*x);
+	}
+	public void doubleValue(Demo obj){
+		obj.x=2*obj.x;
+		obj.y=2*obj.y;
+	}
+	public void display(){
+		System.out.println(this);
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+	Demo d=new Demo(10);
+	d.display();
+	Demo dnew=d.getDemo();
+	System.out.println(d);
+	System.out.println(dnew);
+	}
+
+}
