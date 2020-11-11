@@ -1,0 +1,41 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of HAS-A Relationship
+class Address{
+	int h_no;
+	String city;
+	String state;
+	
+	
+Address(int h_no,String city,String state){
+	this.h_no=h_no;
+	this.city=city;
+	this.state=state;
+}
+}
+public class Student {
+
+	int roll_no;
+	String name;
+	Address add;
+	
+	Student(int r,String n,Address a){
+		roll_no=r;
+		name=n;
+		add=a;
+	}
+	public void Show(){
+		System.out.println(name+" "+roll_no+" "+add.h_no+","+add.city+","+add.state);
+	}
+	public static void main(String[] args) {
+		Address a1=new Address(310,"Mysuru","Karnatka");
+		Student s1=new Student(99,"Dekay",a1);
+		
+		Address a2=new Address(410,"Vellor","Tamil Nadu");
+		Student s2=new Student(101,"Auro",a2);
+//		s1.Show();
+//		s2.Show();
+		
+	}
+
+}
