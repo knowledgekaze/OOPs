@@ -1,0 +1,47 @@
+//1. Identification of instance member from top to bottom
+//2. Execution of instance assignments and instance blocks from top to bottom
+//3. Execution of constructor 
+
+
+//i=100
+//x=1
+//IB
+//j=10
+//IB
+//IB
+//k=99;
+public class myTest {
+		int i=100;
+		int x;
+		
+		myTest(int v){
+			x=v;
+			display();
+			System.out.println("Inside the constr");
+			
+		}
+		{
+			display();
+			System.out.println("1st Instance block");
+		}
+		 int j=10;
+		{
+	     	display();
+			System.out.println("2nd Instance block");
+		}
+	   public void display(){
+			System.out.println("Inside the display method:"+i+" "+j+" "+k+" "+x);
+		}
+		{
+			display();
+			System.out.println("3rd Instance block");
+		}
+		 int k=99;
+		
+		public static void main(String[] args) {
+			System.out.println("Inside the main method");
+			myTest c=new myTest(1);
+			//
+			
+		}
+	}
