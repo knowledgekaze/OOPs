@@ -1,3 +1,6 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the this Static Block concept
 
 //  1. Identification of static members from top to bottom
 //  2. Excecution of static variable assignments & static blocks from top to bottom
