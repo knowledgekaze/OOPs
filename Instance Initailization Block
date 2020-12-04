@@ -1,0 +1,34 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+
+//Program to understand the IIB  concept
+
+public class Tester {
+	int i=1;
+	static int j=1;
+	
+	Tester(int i){
+		this.i=i;
+	}
+	
+	{
+		j=5;
+		System.out.println("This is instance block "+i+" "+j);
+	}
+//	{
+//		System.out.println("2nd instance block");
+//	}
+	
+	public void display(){
+		System.out.println(i+" "+j);
+	}
+	
+	public static void main(String[] args) {
+		Tester t1=new Tester(100);
+		t1.display();
+		
+		Tester t2=new Tester(50);
+		t2.display();
+		
+		}
+}
