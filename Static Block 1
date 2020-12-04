@@ -1,0 +1,52 @@
+
+//  1. Identification of static members from top to bottom
+//  2. Excecution of static variable assignments & static blocks from top to bottom
+//  3. Execution of main method
+
+
+// i=100
+// x=1;
+// SB
+// j=10;
+// SB
+// disp();
+// SB
+// k=99
+// main();
+
+public class myTest {
+	static int i=100;
+	 static int x;
+	myTest(int v){
+		x=v;
+		display();
+		System.out.println("Inside the constr");
+		
+	}
+	static{
+		display();
+		System.out.println("1st static block");
+	}
+	 static int j=10;
+	 static{
+		 display();
+		 System.out.println("2nd static block");
+	 }
+	
+
+   public static void display(){
+		System.out.println("Inside the display method:"+i+" "+j+" "+k+" "+x);
+	}
+	static{
+		display();
+		System.out.println("3rd static block");
+	}
+	 static int k=99;
+	
+	public static void main(String[] args) {
+		System.out.println("Inside the main method");
+		myTest c=new myTest(1);
+		
+	}
+
+}
