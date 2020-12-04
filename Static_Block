@@ -1,0 +1,31 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the Static Block concept
+
+//1. Identification of static members from top to bottom
+//2. Excecution of static variable assignments & static blocks from top to bottom
+//3. Execution of main method
+
+public class Tester {
+	int i=1;
+	static int j=1;
+	
+	Tester(int i){
+		this.i=i;
+	}
+	Tester(int i,int j){
+		this.i=i;
+		this.j=j;
+	}
+	static{
+		j=5;
+		System.out.println("This is static  block");
+	}
+	public void display(){
+		System.out.println(i+" "+j);
+	}
+	public static void main(String[] args) {
+	System.out.println("this is main method");	
+	
+		}
+}
