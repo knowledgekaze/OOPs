@@ -1,0 +1,44 @@
+//1. Identification of static members from top to bottom
+//2. Excecution of static variable assignments & static blocks from top to bottom
+//3. Execution of main method
+
+class Test{
+	int x;
+	static int i=10;
+	static{
+		displayA();
+		System.out.println("1st static block");
+	}
+   public static void displayA(){
+		System.out.println("Inside the displayA method:"+i+" "+j);
+	}
+	static int j=99;
+	static{
+		displayA();
+		System.out.println("2nd static block");
+	}	
+}
+class classDemo extends Test{
+	int y;
+	classDemo(int v){
+		y=v;
+		displayB();
+		System.out.println("Inside the classDemo contr");
+	}
+	public static void displayB(){
+		System.out.println("Inside the displayB method:"+i+" "+j+" "+k);
+	}
+	static{
+		displayA();
+		displayB();
+		System.out.println("3rd static block");		
+	}
+	static int k=100;
+
+	public static void main(String[] args) {
+		System.out.println("Inside the main method");
+		classDemo c=new classDemo(3);
+		//
+		
+	}
+}
