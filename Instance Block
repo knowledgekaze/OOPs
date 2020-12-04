@@ -1,0 +1,53 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+
+//Program to understand the IB concept
+
+//1. Identification of instance member from top to bottom
+//2. Execution of instance assignments and instance blocks from top to bottom
+//3. Execution of constructor 
+
+class Test{
+	int i=10;
+	Test(){
+		System.out.println("test constr");
+		
+	}
+	{
+		displayA();
+		System.out.println("1st instance block");
+	}
+   public void displayA(){	
+		System.out.println("Inside the displayA method:"+i+" "+j);
+	}
+	 int j=99;
+	{
+		displayA();
+		System.out.println("2nd instance block");
+	}	
+}
+
+class classDemo extends Test{
+	int y;
+	classDemo(int v){
+		//super();
+		y=v;
+		displayB();
+		System.out.println("Inside the classDemo contr");
+	}
+	public void displayB(){
+		System.out.println("Inside the displayB method:"+i+" "+j+" "+k+" "+y);
+	}
+	{
+		displayA();
+		displayB();
+		System.out.println("3rd instance block");		
+	}
+	 int k=100;
+
+	public static void main(String[] args) {
+		System.out.println("Inside the main method");
+		Test c=new classDemo(3);	
+	}
+
+}
