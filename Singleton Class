@@ -1,0 +1,31 @@
+//OOPs Playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Singleton Class
+
+public class Singleton {
+	int x;
+	private static Singleton obj;
+	
+	private Singleton(){
+	}
+	
+	public static Singleton getInstance(){
+		if(obj==null){
+			return obj=new Singleton();
+		}
+		return obj;
+	}
+
+	
+	public static void main(String[] args) {
+		
+		Singleton s1=Singleton.getInstance();
+		s1.x=10;
+		Singleton s2=Singleton.getInstance();
+		
+		s2.x=444;
+		System.out.println(s1.x+" "+s2.x);
+	
+	}
+
+}
