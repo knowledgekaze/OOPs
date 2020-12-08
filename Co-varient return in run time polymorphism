@@ -1,0 +1,31 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to expalain the covarient return in run time polymorphism
+
+class Vehicle{
+	public Object show(){
+		System.out.println("Vehicle method");
+		return null;
+	}
+}
+class Car extends Vehicle{
+	public String show(){
+		System.out.println("Car method");
+		return new String("hello");
+	}
+}
+
+public class Test {
+	public static void main(String[] args) {
+		Vehicle v=new Vehicle();
+		v.show();
+		
+		v=new Car();
+		Car c=new Car();
+		
+		v.show();
+		c.show();
+		
+	}
+
+}
