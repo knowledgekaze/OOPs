@@ -1,0 +1,56 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to expalain the Run time polymorphism
+
+class Animal{
+	String name="Animal";
+	public void animalVoice(){
+		System.out.println("method of animal class");
+	}
+}
+class Cat extends Animal{
+	String name="Cat";
+	public void animalVoice(){
+		System.out.println("meow");
+	}
+}
+class Dog extends Animal{
+	String name="Dog";
+	public void animalVoice(){
+		System.out.println("woof");
+	}
+}
+class Lion extends Animal{
+	String name="Lion";
+	public void animalVoice(){
+		System.out.println("roar");
+	}
+}
+public class Demo {
+
+	public static void main(String[] args) {
+//		Animal a=new Animal();
+//		a.animalVoice();
+//		System.out.println(a.name);
+//		
+//		a=new Cat();
+//		a.animalVoice();
+//		System.out.println(a.name);
+//
+//		
+//		a=new Dog();
+//		a.animalVoice();
+//		System.out.println(a.name);
+		Dog d=new Dog();
+		d.animalVoice();
+		System.out.println(d.name);
+
+		
+//		a=new Lion();
+//		a.animalVoice();
+//		System.out.println(a.name);
+
+
+	}
+
+}
