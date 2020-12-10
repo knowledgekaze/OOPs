@@ -1,0 +1,41 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to expalain the final keyword in java
+
+final class Vehicle{
+	 void show(){
+		System.out.println("Vehicle class method");
+	}
+}
+class Car extends Vehicle{
+	void show(){
+		System.out.println("Car class method");
+	}
+}
+public class FinalDemo {
+	public static void main(String[] args) {
+		
+		Car c=new Car();
+
+		
+//		final int sp_limit=40;
+//		sp_limit++; //sp_limit=sp_limit+1;
+		
+		
+	
+//		 int arr[]=new int[2];
+//		arr=new int[3];
+//		arr[0]=0;
+//		arr[1]=1;
+//System.out.println(arr);
+//		
+//		arr[0]=2*arr[0];
+//		arr[1]=2*arr[1];
+//		System.out.println(arr);
+//		
+//		System.out.println(arr[0]+" "+arr[1]);
+		
+		
+	
+	}
+}
