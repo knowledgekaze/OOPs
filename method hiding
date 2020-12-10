@@ -1,0 +1,30 @@
+  
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to expalain the method hiding
+
+class A{
+	public static void fun(){
+		System.out.println("Method A");
+	}
+}
+class B extends A{
+	public static void fun(){
+		System.out.println("Method B");
+	}
+	
+}
+
+public class classDemo {
+	public static void main(String[] args) {
+		B b=new B();
+		A a=new A();
+		b.fun();
+		a.fun();
+		a=b;
+		a.fun();
+	
+		
+	}
+
+}
