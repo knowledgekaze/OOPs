@@ -1,0 +1,61 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Abstract class
+
+abstract class StudInfo{
+	String name;
+	int roll_no;
+	String address;
+	String branch;
+	StudInfo(String n,int r,String a,String b){
+		name=n;
+		roll_no=r;
+		address=a;
+		branch=b;
+	}
+	public String info(){
+		return name+","+roll_no+","+address;
+	}
+	abstract void modifyDetails(String n, int r, String a,String b);
+	abstract void getBranch();
+}
+ 
+ class Student extends StudInfo{
+	 double obt_marks;
+	 double tot_marks=100;
+	 Student(double m,String n,int r,String a,String b){
+		 super(n,r,a,b);
+		 obt_marks=m;
+	 }
+
+	@Override
+	void modifyDetails(String n, int r, String a,String b) {
+		name=n;
+		roll_no=r;
+		address=a;
+		branch=b;
+	}
+
+	@Override
+	void getBranch() {
+		System.out.println(branch);
+	}
+	double getPercent(){
+		return obt_marks/tot_marks*100;
+	}
+	 
+ }
+ 
+public  class myTest{
+	public static void main(String[] args) {
+		Student s1=new Student(80,"Dekay", 99, "New Delhi","CS");
+		
+		System.out.println(s1.info());
+		//
+		s1.getBranch();
+		System.out.println(s1.getPercent()+"%");
+	}
+
+	
+
+}
