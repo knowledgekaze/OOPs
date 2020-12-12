@@ -1,0 +1,43 @@
+ //OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Abstract class
+
+ abstract class ReserveBank{
+   abstract double getInterest();
+}
+
+class ICICI extends ReserveBank{
+	double getInterest(){
+		return 7;
+	}
+}
+
+class Axis extends ReserveBank{
+	double getInterest(){
+		return 7.2;
+	}
+}
+class SBI extends ReserveBank{
+	double getInterest(){
+		return 7.2;
+	}
+}
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ReserveBank b;
+		
+		b=new ICICI();
+		System.out.println(b.getInterest());
+		
+		b=new Axis();
+		System.out.println(b.getInterest());
+		
+		b=new SBI();
+		System.out.println(b.getInterest());
+		
+	}
+
+}
