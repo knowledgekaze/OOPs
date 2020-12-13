@@ -1,0 +1,42 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of multiple Interface
+
+interface interf1{
+	int i=10;
+	void m1();
+}
+interface interf2{
+	int i=20;
+	void m2();
+}
+interface interf3{
+	int j=30;
+	void m1();
+}
+public class MyTest implements interf1,interf2,interf3{
+	
+	@Override
+	public void m2() {
+	System.out.println("m2 method");	
+	}	
+	
+	@Override
+	public void m1() {
+		System.out.println("m1 method");
+	}
+public static void main(String[] args){
+	MyTest t=new MyTest();
+	
+	t.m1();
+	t.m2();
+	
+	System.out.println(j);
+	System.out.println(interf3.j);
+	System.out.println(t.j);
+	
+	System.out.println(interf1.i);
+	System.out.println(interf2.i);
+	
+}
+}
