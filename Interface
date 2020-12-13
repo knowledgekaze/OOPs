@@ -1,0 +1,40 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to uderstand the concept of Interface
+
+interface interf{
+	int i=10; //public static final int i=10;
+    default void show(){
+    	System.out.println("show met");
+    }
+	static void display(){  //public abstract void display();
+		System.out.println("disp met");
+	}            
+	void set(int j);
+}
+
+public class Demo implements interf {
+//	@Override
+//	public void show() {
+//		System.out.println("show method");	
+//	}
+	@Override
+	public void set(int j) {
+		System.out.println(j);	
+	}
+//	@Override
+//	public void display() {
+//		System.out.println("display method");	
+//	}
+	
+
+	public static void main(String[] args) {
+		interf obj=new Demo();
+		System.out.println(obj.i);
+		obj.set(10);
+		obj.show();
+		interf.display();
+	}
+
+	
+}
