@@ -1,0 +1,27 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Method Local Inner Class
+
+public class Test {
+	int x=7;
+	public void show(){
+		int y=100;
+		
+		class Inner{
+			int z=1000;
+			public void innerDisp(){
+				System.out.println(x+" "+y+" "+z);
+			}
+		}
+		Inner i=new Inner();
+		i.innerDisp();
+		
+	}
+		
+	
+	public static void main(String[] args) {
+		Test t=new Test();
+		t.show();
+	}
+
+}
