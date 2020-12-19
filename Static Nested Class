@@ -1,0 +1,32 @@
+  
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Abstract class
+
+class OuterCls 
+{  
+    static int x = 10;      
+    int y = 20;      
+    private static int z = 30; 
+    
+    static class StNestedCls //static nested class
+    { 
+         static void show() 
+        { 
+            System.out.println("x = " + x); 
+            System.out.println("z = " + z); 
+
+
+        } 
+    } 
+    
+} 
+
+public class Main {
+		public static void main(String[] args) 
+	    { 
+//			OuterCls.StNestedCls obj = new OuterCls.StNestedCls(); 
+//	        obj.show(); 
+	        OuterCls.StNestedCls.show();
+	    } 
+	}
