@@ -1,0 +1,21 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Anonymous class
+
+interface InterfDemo 
+{ 
+    int x = 21; 
+    void show(); 
+}
+public class Main3 {
+	public static void main(String[] args) { 
+		
+		InterfDemo i = new InterfDemo() { 
+            @Override
+            public void show() { 
+                System.out.print("value is "+x); 
+            } 
+        }; 
+        i.show(); 
+    } 
+}
