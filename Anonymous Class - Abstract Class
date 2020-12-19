@@ -1,0 +1,22 @@
+
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Anonymous class
+
+abstract class Democlass {
+	   public abstract void show();
+	}
+
+public class Main2 {
+	 public static void main(String args[]) {
+		 
+		 Democlass d = new Democlass() {
+	         public void show() {
+	            System.out.println("anonymous class");
+	         }
+	        
+	      };
+	      d.show();
+	   }
+
+}
