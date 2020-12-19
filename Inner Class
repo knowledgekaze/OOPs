@@ -1,0 +1,36 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept Inner Class
+
+public class Demo {
+  private int x=7;
+  static int y=25;
+  
+	class InnerDemo{
+		public int z=1000;
+		public void Show(){
+			System.out.println(x+" "+y+" "+z);
+		}	
+	}
+	
+	public void getInstance(){
+		InnerDemo id=new InnerDemo();
+		id.Show();
+	}
+	
+	
+	public static void main(String[] args) {
+		
+//		Demo d=new Demo();
+//    	d.getInstance();
+		
+//		Demo d=new Demo();
+//		Demo.InnerDemo dinner=d.new InnerDemo();
+//		dinner.Show();
+		
+		Demo.InnerDemo newdinner=new Demo().new InnerDemo();
+		newdinner.Show();
+		
+	}
+
+}
