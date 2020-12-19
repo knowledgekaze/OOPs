@@ -1,0 +1,20 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Anonymous Class
+
+class Demo {
+	   public void show() {
+	      System.out.println("Inside the Demo class");
+	   }
+	}
+
+class Main {
+	   public static void main(String[] args) {
+		  Demo d=new Demo(){
+			  public void show() {
+			      System.out.println("Inside the Anonm class");
+			   } 
+		  };
+		  d.show();
+	   }
+	}
