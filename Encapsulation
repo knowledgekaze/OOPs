@@ -1,0 +1,42 @@
+ //OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Encapsulation
+
+class Emp{
+	private String name;
+	private int age;
+	private int salary;
+	//set methods
+	public void setName(String n){
+		name=n;
+	}
+	public void setAge(int a){
+		age=a;
+	}
+	public void setSalary(int s){
+		salary=s;
+	}
+	//get methods
+	public String getName(){
+		return name;
+	}
+	public int getAge(){
+		return age;
+	}
+	public int getSalary(){
+		return salary;
+	}
+}
+public class EncapDemo {
+	public static void main(String[] args) {
+		
+		Emp e1=new Emp();
+		e1.setName("Dekay");
+		e1.setAge(20);
+		e1.setSalary(20000);
+		
+		System.out.println(e1.getName()+" "+e1.getAge()+" "+e1.getSalary());
+		
+	}
+
+}
