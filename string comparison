@@ -1,0 +1,33 @@
+ //OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Abstract class
+
+public class Tester {
+
+	public static void main(String[] args) {
+		//String
+		long startTime=System.currentTimeMillis();
+		String str="abcd";
+		for(int i=0;i<100000;i++){
+			str=str+"defg";
+		}
+		System.out.println("String :"+(System.currentTimeMillis()-startTime));
+		
+		//StringBuffer
+		startTime=System.currentTimeMillis();
+		StringBuffer sbuf=new StringBuffer("abcd");
+		for(int i=0;i<100000;i++){
+			sbuf.append("defg");
+		}
+		System.out.println("StringBuffer :"+(System.currentTimeMillis()-startTime));
+		
+		//StringBuilder
+		startTime=System.currentTimeMillis();
+		StringBuilder sbuilder=new StringBuilder("abcd");	
+		for(int i=0;i<100000;i++){
+			sbuilder.append("defg");
+		}
+		System.out.println("StringBuilder :"+(System.currentTimeMillis()-startTime));	
+	}
+
+}
