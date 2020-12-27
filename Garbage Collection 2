@@ -1,0 +1,26 @@
+//OOPs playlist link:https://www.youtube.com/playlist?list=PLjSR4dIhf6y7pe8UT3p1DxBpDxbAq4Qoy
+
+//Program to understand the concept of Garbage Collection
+
+public class Test {
+
+	public void finalize(){
+		System.out.println(this);
+	}
+	public static void main(String[] args) {
+		
+		Test t1=new Test();
+		System.out.println(t1);
+		t1=null;
+		
+		Test t2=new Test();
+		System.out.println(t2);
+		t2=null;
+		
+//		System.gc();
+		Runtime.getRuntime().gc();
+		System.out.println("main method");
+		
+	}
+
+}
